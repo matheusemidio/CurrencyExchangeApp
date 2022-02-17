@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E4EDAB"
+
+    >
+    <ImageView
+        android:id="@+id/imMain"
+        android:layout_width="277dp"
+        android:layout_height="190dp"
+        app:srcCompat="@drawable/currencyexchange"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:id="@+id/tvInitialLabel"
+        android:layout_width="154dp"
+        android:layout_height="23dp"
+        android:text="From"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="218dp"
+        app:layout_constraintTop_toBottomOf="@id/imMain"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tvFinalLabel"
+        android:layout_width="154dp"
+        android:layout_height="23dp"
+        android:text="To"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="218dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/imMain"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvInitialLabel"
+        />
+
+    <ListView
+        android:id="@+id/lvInitial"
+        android:layout_width="157dp"
+        android:layout_height="245dp"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="250dp"
+        app:layout_constraintTop_toBottomOf="@id/tvFinalLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <ListView
+        android:id="@+id/lvFinal"
+        android:layout_width="157dp"
+        android:layout_height="245dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="250dp"
+        app:layout_constraintTop_toBottomOf="@id/tvInitialLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/tvInitialCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placeholder From"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="517dp"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/lvInitial"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tvFinalCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placeholder To"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="517dp"
+        app:layout_constraintTop_toBottomOf="@id/lvFinal"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:textSize="15sp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnSwap"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/black"
+        android:src="@drawable/ic_swap_foreground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFinalCurrency"
+        android:scaleType="center"
+
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="636dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/teal_700"
+
+        />
+    <EditText
+        android:id="@+id/edInitialValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:text="Enter the value:"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="594dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSwap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvFinalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Final Value"
+        tools:layout_editor_absoluteX="292dp"
+        tools:layout_editor_absoluteY="624dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSwap"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
